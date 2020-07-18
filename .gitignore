@@ -1,2 +1,2 @@
 *.exe
-./strvector.cpp
+strvector.cpp
