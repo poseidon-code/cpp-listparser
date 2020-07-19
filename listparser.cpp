@@ -54,7 +54,7 @@ class ListParseInt {
 
 int main() {
     string str; getline(cin, str);      // gets the INPUT STRING from the user
-    ListParseInt ob(str);       // Parse the STRING int ARRAY of <int> type data
+    ListParseInt ob(str);               // Parse the STRING into ARRAY of <int> type data
 
     // avaialble functions :
     vector <int> list = ob.get_list();      // gets the PARS'ED' LIST
