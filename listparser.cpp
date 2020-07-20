@@ -23,14 +23,14 @@ class ListParser {
                     list = create_list();
                 }
 
-                vector <T> create_list();   // GENERATES list of <int> type elements               
+                vector <T> create_list();   // GENERATES list of <T> type elements               
                 vector <T> get_list();      // RETURNS Generated List                
                 int get_size();             // RETURNS Generated List's Size
                 void show_list();           // DISPLAY Generated List
 };
 
 
-// GENERATES list of <int> type elements 
+// GENERATES list of <T> type elements 
 template <typename T>
 vector<T> ListParser<T> :: create_list() {
     stringstream ss(str);
@@ -79,7 +79,7 @@ void ListParser<T> :: show_list() {
 // driver code <EDIT THIS>
 int main() {
     string str; getline(cin, str);          // gets the INPUT STRING from the user
-    ListParser<int> ob(str);                // Parse the STRING into ARRAY of <int> type data
+    ListParser<int> ob(str);                // Parse the STRING into ARRAY of <T> type data // here <int>
 
     // avaialble functions :
     vector<int> list = ob.get_list();       // gets the PARS'ED' LIST
