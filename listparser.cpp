@@ -5,16 +5,17 @@
 
 using namespace std;
 
-/*
-Go through the README.md on how to use this :  
-*/
+/*  *****
+Go through the README.md on how to use this program !
+https://github.com/poseidon-code/Cpp-singleline-array-input
+    *****   */
 
 
 template <typename T>
 class ListParser {
-    private:    string str;             //input String
-                int size;               // LIST size
-                vector <T> list;        // LIST array
+    private:    string str;                 // input String
+                int size;                   // LIST size
+                vector <T> list;            // LIST array
     
     public:     ListParser(string s) {
                     str = s;
@@ -22,20 +23,14 @@ class ListParser {
                     list = create_list();
                 }
 
-                // GENERATES list of <int> type elements
-                vector <T> create_list();
-
-                // RETURNS Generated List
-                vector <T> get_list();
-
-                // RETURNS Generated List's Size
-                int get_size();
-
-                // DISPLAY Generated List
-                void show_list();
+                vector <T> create_list();   // GENERATES list of <int> type elements               
+                vector <T> get_list();      // RETURNS Generated List                
+                int get_size();             // RETURNS Generated List's Size
+                void show_list();           // DISPLAY Generated List
 };
 
 
+// GENERATES list of <int> type elements 
 template <typename T>
 vector<T> ListParser<T> :: create_list() {
     stringstream ss(str);
@@ -50,19 +45,24 @@ vector<T> ListParser<T> :: create_list() {
 }
 
 
+// RETURNS Generated List
 template <typename T>
 vector<T> ListParser<T> :: get_list() {
     return list;
 }
 
+
+// RETURNS Generated List's Size
 template <typename T>
 int ListParser<T> :: get_size() {
     return size;
 }
 
+
+// DISPLAY Generated List
 template <typename T>
 void ListParser<T> :: show_list() {
-    cout<<"[";
+    cout<<"{";
     for (int i=0; i<size; i++) {
         if(is_same<T, string>::value) 
             cout<<"\""<<list[i]<<"\"";
@@ -72,19 +72,19 @@ void ListParser<T> :: show_list() {
         if(i==size-1) break;
         cout<<", ";
     }
-    cout<<"]";
+    cout<<"}";
 }
 
 
-
+// driver code <EDIT THIS>
 int main() {
-    string str; getline(cin, str);      // gets the INPUT STRING from the user
-    ListParser<int> ob(str);          // Parse the STRING into ARRAY of <int> type data
+    string str; getline(cin, str);          // gets the INPUT STRING from the user
+    ListParser<int> ob(str);                // Parse the STRING into ARRAY of <int> type data
 
     // avaialble functions :
-    vector<int> list = ob.get_list();   // gets the PARS'ED' LIST
-    int size = ob.get_size();              // gets the PARS'ED' LIST's SIZE
-    ob.show_list();                        // displays the PARS'ED' LIST
+    vector<int> list = ob.get_list();       // gets the PARS'ED' LIST
+    int size = ob.get_size();               // gets the PARS'ED' LIST's SIZE
+    ob.show_list();                         // displays the PARS'ED' LIST
 
     return 0;
 }
