@@ -35,7 +35,7 @@ ___
 
 ## Usage
 
-*   Create a `string` inside `int main()` type variable and take input during the runtime using      `getline()`.
+*   Create a `string` type variable inside `int main()` and take input during the runtime using `getline()`.
 
     Your code will look like this :
     ```c++
